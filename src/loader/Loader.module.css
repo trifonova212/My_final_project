@@ -1,0 +1,16 @@
+.loader {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

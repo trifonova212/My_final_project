@@ -1,0 +1,21 @@
+.wrapper {
+    width: 415px;
+    height: 225px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-left: 27px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 20px;
+}
+
+.image {
+    width:65px;
+    height: 79px;
+    margin-top: 22px;
+    margin-left: 19px;
+    margin-bottom: 12px;
+}

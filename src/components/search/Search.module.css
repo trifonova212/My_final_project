@@ -1,0 +1,45 @@
+.wrapper {
+	height: 892px;
+}
+
+.h1 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: 0.03em;
+	margin-top: 69px;
+	margin-left: 60px;
+}
+.p {
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	margin: 25px 0px 0px 60px;
+}
+
+.document {
+	width: 91px;
+	height: 112px;
+	position: relative;
+	bottom: 1030px;
+	left: 953px;
+}
+
+.folders {	
+	width: 140px;
+	height: 68px;
+	position: relative;
+	bottom: 1060px;
+	left: 1115px;
+}
+
+.man {
+	width: 442px;
+	height: 470px;
+	position: relative;
+	left: 785px;
+	bottom: 480px;
+}

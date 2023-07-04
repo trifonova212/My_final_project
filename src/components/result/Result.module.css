@@ -1,0 +1,61 @@
+.wrapper {
+	height: 1737px;
+}
+
+.image {
+	position: relative;
+	float: right;
+	width: 553px;
+	height: 369px;
+
+}
+
+.h1 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: 0.04em;
+	margin-left: 60px;
+	margin-top: 69px;
+}
+
+.p {
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+
+	margin-top: 36px;
+	margin-bottom: 127px;
+	margin-left: 60px;
+}
+
+.h2 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 30px;
+	line-height: 36px;
+
+	letter-spacing: 0.02em;
+	margin: 0px 0px 0px 60px;
+
+}
+
+
+.slider {
+	width: 1350px;
+	}
+	
+	
+
+.sliderItem {
+		background-color: aquamarine;
+		width: 415px;
+		height: 225px;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		margin-left: 27px;
+}

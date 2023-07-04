@@ -1,0 +1,98 @@
+
+.main {
+	height: 2637px;
+}
+
+.first {
+	display: flex;
+}
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.image {
+	height: 593px;
+	width: 629px;
+	margin-right: 50px;
+	margin-top: 51px;
+}
+
+.image2 {
+	height: 576px;
+	width: 1307px;
+	margin-right: 82px;
+	margin-top: 70px;
+	margin-bottom: 109px; 
+	margin-left: 51px;
+}
+
+.h1 {
+	font-family: 'Ferry', arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 60px;
+	line-height: 72px;
+	margin-left: 60px;
+	margin-top: 69px;
+}
+
+.h3 {
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	margin-left: 60px;
+}
+
+.h2 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 54px;
+	margin-left: 60px;
+	margin-bottom: 70px;
+	
+}
+
+
+.rates {
+	display: flex;
+	gap: 38px;
+	margin-left: 60px;
+}
+
+
+.button {
+	background: #5970FF;
+	border-radius: 5px;
+	height: 59px;
+	width: 335px;
+	border: none;
+	margin-left: 60px;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 27px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	line-height: 59px;
+}
+
+@media (max-width: 768px) {
+    .buildings {
+        display: none;
+    }
+    .section__map-container {
+        width: 340px;       
+        background-color: #181818;
+        z-index: 0;
+    }
+    .section__map-overlay {
+        display: none;
+    }
+}

@@ -1,0 +1,34 @@
+.wrapper {
+	display: flex;
+}
+
+.h1 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: 0.8px;
+	margin-top: 69px;
+	margin-left: 60px;
+	color: #000;
+}
+
+.image {
+	width: 322px;
+	height: 342px;
+	margin: 14px 0px 104px 172px;
+}
+
+.padlock {
+	width: 76px;
+	height: 93px;
+	position: relative;
+	left: 810px;
+	bottom: 690px;
+}
+
+.form {
+	margin: 70px 0px 0px 60px;
+}
