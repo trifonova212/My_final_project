@@ -10,12 +10,12 @@ const Search = () => {
 	return (
 		<div className={css.wrapper}>
 		
-			<h1 className={css.h1}>Найдите необходимые<br /> данные в пару кликов.</h1>
-			<p className={css.p}>Задайте параметры поиска.<br /> Чем больше заполните, тем точнее поиск</p>
+			<h1 className={css.titleH1}>Найдите необходимые<br /> данные в пару кликов.</h1>
+			<div className={css.titleParams}>Задайте параметры поиска.<br /> Чем больше заполните, тем<br className={css.mobileBr}/> точнее поиск</div>
 			<SearchForm />
-			<img className={css.document} src={document} alt="Документ" />
-			<img className={css.folders} src={folders} alt="Папки" />
-			<img className={css.man} src={man} alt="Мужчина и ракета" />
+			<img className={css.imageDocument} src={document} alt="Документ" />
+			<img className={css.imageFolders} src={folders} alt="Папки" />
+			<img className={css.imageMan} src={man} alt="Мужчина и ракета" />
 		</div>
 	)
 }

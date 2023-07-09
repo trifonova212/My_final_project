@@ -8,15 +8,15 @@ const SecondRate = () => {
 		<div className={css.wrapper}>
 			<div className={css.secondColour}>
 				<img className={css.image} src={target} alt="Мишень" />
-				<h4 className={css.h4}>Pro</h4>	 				
+				<h4 className={css.textH4}>Pro</h4>	 				
 				<p className={css.text}>Для HR и фрилансеров</p>
 			</div>
-			<div  className={css.price}>
+			<div  className={css.wrapperPrice}>
 				<p className={css.priceNow}>1 299 ₽</p>	
 				<p className={css.priceEarlier}><del>2 600 ₽</del></p>	
 			</div>
 			<p className={css.rate}>или 279 ₽/мес. при рассрочке на 24 мес.</p>
-			<h5 className={css.h5}>В тариф входит:</h5>
+			<h5 className={css.textH5}>В тариф входит:</h5>
 
 			<div className={css.checkmarkWrapper}>
 				<img className={css.checkmark} src={checkmark} alt="Галочка" />

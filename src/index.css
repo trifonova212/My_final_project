@@ -19,5 +19,11 @@
 	font-weight: 400;
 	color: #000000;
 	letter-spacing: 0.01em;
+	line-height: normal;
 }
 
+@media screen and (max-width: 780px) {
+    main, header {
+		width: 375px;
+	}
+}

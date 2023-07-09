@@ -1,34 +1,77 @@
 .wrapper {
 	display: flex;
+	flex-wrap: wrap;
+	height: 670px;
 }
-
-.h1 {
+.h1Title {
 	font-family: 'Ferry', arial;
 	text-transform: uppercase;
-	font-style: normal;
 	font-weight: 900;
 	font-size: 40px;
-	line-height: 48px;
 	letter-spacing: 0.8px;
-	margin-top: 69px;
-	margin-left: 60px;
-	color: #000;
+	order: 1;
+	position: relative;
+	left: 60px;
+	margin: 0;
+	top: 69px;
 }
-
-.image {
+.imagePeople {
 	width: 322px;
 	height: 342px;
-	margin: 14px 0px 104px 172px;
-}
+	order: 4;
+	position: relative;
+	bottom: 310px;
+	left: 172px;
 
-.padlock {
+}
+.imagePadlock {
 	width: 76px;
 	height: 93px;
+	order: 2;
 	position: relative;
-	left: 810px;
-	bottom: 690px;
+	left: 130px;
+	top: 30px;
 }
-
 .form {
-	margin: 70px 0px 0px 60px;
+	order: 3;
+	position: relative;
+	top: 69px;
+	left: 100px;
+}
+.brMobile {
+	display: none;
+}
+@media screen and (max-width: 780px) {
+	.wrapper {
+		width: 375px;
+		height: 1250px;
+	}
+    .h1Title{
+        font-size: 22px;
+		letter-spacing: 0.44px;
+		left: 14px;
+		top: 31px;
+    }
+	.brMobile {
+		display: block;
+	}
+	.imagePadlock {
+		width: 75.219px;
+		height: 92.065px;
+		left: 100px;
+		top: 65px;		
+	}
+	.imagePeople {
+		width: 335px;
+		height: 356px;
+		bottom: 40px;
+		left: 14px;
+		margin-top: 49px ;	
+	}
+	.form {
+		top: 0;
+		left: 14px;
+		margin-top: 0;
+	}
+
 }

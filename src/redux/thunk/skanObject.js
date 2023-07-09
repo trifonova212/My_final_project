@@ -3,12 +3,16 @@ import axios from 'axios';
 
 export const getSkanDocument = createAsyncThunk (
     'documents', 
-    async (data, {rejectWithValue}) => {
+    async (objectSearch, {rejectWithValue}) => {
         const token = localStorage.getItem('token');
         try{
         const document = await axios.post('https://gateway.scan-interfax.ru/api/v1/documents',   {
-                "ids": [ '1:0JPQqdGM0JNWCdCzf2Jt0LHQotGV0ZUh0ZbRlBXCt0Je0JHQruKAnDcUXkZQ0YvQscKnehLRnNC1KtGK0Ll9BWLigLo/HXXCrhw='
-        ]
+
+                "ids": objectSearch.map((elem) =>
+                elem.encodedId
+                         
+                )
+        
             },
           {
             headers: {
@@ -31,3 +35,4 @@ export const getSkanDocument = createAsyncThunk (
     }
 
 )
+

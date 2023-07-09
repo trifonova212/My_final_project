@@ -2,7 +2,7 @@
 	height: 892px;
 }
 
-.h1 {
+.titleH1 {
 	font-family: 'Ferry', arial;
 	text-transform: uppercase;
 	font-style: normal;
@@ -13,14 +13,14 @@
 	margin-top: 69px;
 	margin-left: 60px;
 }
-.p {
+.titleParams {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
 	margin: 25px 0px 0px 60px;
 }
 
-.document {
+.imageDocument {
 	width: 91px;
 	height: 112px;
 	position: relative;
@@ -28,7 +28,7 @@
 	left: 953px;
 }
 
-.folders {	
+.imageFolders {	
 	width: 140px;
 	height: 68px;
 	position: relative;
@@ -36,10 +36,58 @@
 	left: 1115px;
 }
 
-.man {
+.imageMan {
 	width: 442px;
 	height: 470px;
 	position: relative;
 	left: 785px;
 	bottom: 480px;
+}
+.mobileBr {
+	display: none;
+}
+
+@media screen and (max-width: 780px) {
+	.mobileBr {
+		display: block;
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 1402px;
+	}
+	.titleH1 {
+		font-size: 28px;
+		letter-spacing: 0.28px;
+		line-height: normal;
+		margin-top: 20px;
+		margin-left: 14px;
+	}
+	.titleParams {
+		font-size: 18px;
+		line-height: normal;	
+		margin: 19px 0px 21px 14px;
+	}
+	
+	
+	.imageDocument {
+		width: 59px;
+		height: 72px;
+		position: absolute;
+		position: relative;
+		left: 300px;
+		bottom: 790px;
+	}
+
+	.imageFolders {	
+		display: none;
+	}
+
+	.imageMan {
+		width: 380px;
+		height: 403px;
+		position: relative;
+		left: 30px;
+		bottom: 30px;
+	}
 }

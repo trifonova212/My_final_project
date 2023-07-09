@@ -1,11 +1,13 @@
-.wrapper {
+.wrapperForm {
 	width: 429px;
 	height: 523px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 	border-radius: 10px;
 }
-
-.firstButton {
+.wrapperElements{
+	margin: 25px 25px 39px 25px;
+}
+.logButton {
 	width: 151px;
 	height: 36px;
 	border: none;
@@ -15,10 +17,9 @@
 	line-height: 19px;
 	letter-spacing: 0.02em;
 	color: #029491;
-	margin: 17px 15px 40px 25px;
+	margin: 17px 15px 40px 0px;
 }
-
-.secondButton {
+.regButton {
 	width: 213px;
 	height: 36px;
 	border: none;
@@ -30,30 +31,35 @@
 	color: #029491;
 	margin: 17px 0px 0px 0px;
 }
-
 .buttons {
 	display: flex;
 }
-
-.p {
+.title {
 	font-size: 16px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
 	color: #949494;
-	margin: 0px 0px 0px 25px;
+
 }
 
+.titlePassword {
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	color: #949494;
+	margin-top: 20px;
+	display: block;
+}
 .input {
 	width: 379px;
 	height: 43px;
 	border: 1px solid #C7C7C7;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 	border-radius: 5px;
-	margin: 15px 0px 20px 25px;
+	margin: 15px 0px 0px 0px;
 }
-
-.thirdButton {
-	margin: 10px 0px 0px 25px;
+.enterButton {
+	margin: 30px 0px 0px 0px;
 	width: 379px;
 	height: 59px;
 	background: #5970FF;
@@ -65,10 +71,10 @@
 	color: #FFFFFF;
 	border: none;
 }
-
-.fourthButton {
-	width: 160px;
-	height: 17px;
+.enterButton:disabled {
+	opacity: 0.5;
+}
+.recoverLink {
 	border: none;
 	font-size: 14px;
 	line-height: 17px;
@@ -77,9 +83,10 @@
 	text-underline-offset: 3px;
 	color: #5970FF;
 	background-color: #FFFFFF;
-	margin: 15px 0px 30px 139px;
+	margin: 15px 0px 30px 0px;
+	text-align: center;
+	display: block;
 }
-
 .logoButton {
 	width: 96px;
 	height: 31px;
@@ -87,8 +94,40 @@
 	border: 1px solid rgba(89, 112, 255, 0.51);
 	border-radius: 3px;
 	margin: 15px 0px 0px 10px;
+	text-align: center;
+	line-height: 31px;
 }
+.logoButton:first-child {
+	margin-left: 0px;
+}
+.errorMessage {
+	color: #FF5959;
 
-.firstLogoButton {
-	margin-left: 25px;
+	font-size: 14px;
+
+	letter-spacing: 0.14px;
+	margin: 0;
+	text-align: center;
+}
+.errorInput {
+	color: #FF5959;
+	border: 1px solid #FF5959;
+	box-shadow: 0px 0px 20px 0px rgba(255, 89, 89, 0.20);
+}
+@media screen and (max-width: 780px) {
+	.wrapperForm {
+		width: 335px;
+		height: 504px;
+	}
+	.wrapperElements{
+		margin: 25px 15px 20px 15px;
+	}
+	.input {
+		width: 305px;
+		
+	}
+
+	.enterButton {
+		width: 305px;
+	}
 }

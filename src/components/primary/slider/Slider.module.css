@@ -1,4 +1,41 @@
 .slider {
 width: 1350px;
-}
+margin-left: 84px;
 
+}
+.prevButton {
+    width: 1px;
+    height: 1px;
+    border: none;
+    background: white;
+    position: relative;
+    bottom: 150px;
+    left: 35px;
+}
+.nextButton {
+    width: 1px;
+    height: 1px;
+    border: none;
+    background: white;
+    position: relative;
+    bottom: 150px;
+    left: 1365px;
+}
+@media screen and (max-width: 780px) {
+    .desktopBr {
+        display: none;
+    }
+    .slider {
+        margin-left: 30px;
+        
+    }
+    .prevButton {
+        bottom: 125px;
+        left: 0px;
+        padding-left: 0;
+    }
+    .nextButton {
+        bottom: 125px;
+        left: 292px;
+    }
+}

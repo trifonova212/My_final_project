@@ -16,7 +16,7 @@
 
 }
 
-.text {
+.labelText {
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 0.03em;
@@ -24,7 +24,7 @@
 	display: block;
 }
 
-.input {
+.inputInn, .inputLimitDokuments  {
 	border: 1px solid #C7C7C7;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 	border-radius: 5px;
@@ -37,60 +37,43 @@
 	text-align: center;
 	margin: 20px 0px 0px 44px;
 }
-
-.select {
-	width: 242px;
-	height: 43px;
-	border: 1px solid #C7C7C7;
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
-	border-radius: 5px;
-	font-size: 14px;
-	line-height: 17px;
-	letter-spacing: 0.03em;
-	padding-left: 22px;
-	margin-left: 44px;
-	margin-top: 20px;
+.inputInn:hover, .inputLimitDokuments:hover {	
+	cursor: pointer;
+	opacity: 1;
 }
-.wrapperSelect {
+
+.wrapperDate {
 	display: flex;
 }
 
-.li {
+.wrapperCheckbox {
 	display: flex;
 }
 
 
-.p {
+.labelCheckbox {
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 0.03em;
-	margin: 15px 0px 0px 0px;
+	margin: 15px 0px 0px 20px;
 }
 
-.secondSelect {
-	width: 176px;
-	height: 43px;
-	margin-left: 44px;
-}
-
-.thirdSelect {
-	width: 176px;
-	height: 43px;
-	margin-left: 20px;
-}
-.text2 {
-	margin-top: 39px;
-}
-
-.checkbox {
-	margin-top: 15px;
-}
-
-.firstLi {
+.maginLabelCheckbox {
 	margin-top: 36px;
 }
 
-.button {
+.checkbox {
+	margin-top: 17px;
+	margin-left: 15px;
+	height: 14px;
+	width: 14px;
+
+}
+.maginCheckbox {
+	margin-top: 40px;
+}
+
+.searchButton {
 	display: block;
 	width: 305px;
 	height: 59px;
@@ -106,8 +89,19 @@
 	text-decoration: none;
 	text-align: center;
 	line-height: 59px;
+	
 }
+.searchButton:disabled {
+	opacity: 0.5;
+}
+.errorMessage{
+	color: #FF5959;
+	font-size: 14px;
+	letter-spacing: 0.14px;
+	margin: 0;
+	text-align: center;
 
+}
 .textAfterButton {
 	font-size: 14px;
 	line-height: 17px;
@@ -116,15 +110,6 @@
 	margin: 10px 0px 0px 112px;
 }
 
-.tonalnost {
-	width: 242px;
-	height: 43px;
-	margin-left: 44px;
-	margin-top: 20px;
-	border: 1px solid #C7C7C7;
-	border-radius: 5px;
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-}
 
 .inputDate {
 	width: 176px;
@@ -134,10 +119,130 @@
 	border: 1px solid #C7C7C7;
 	border-radius: 5px;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-
+	opacity: 0.4000000059604645;
+	padding-left: 44px;
+	padding-right: 14px;
+	color: #949494;
+	font-size: 14px;
+	letter-spacing: 0.42px;
 }
 
 .inputDate:nth-child(2n) {
 	margin-left: 20px;
 
+}
+.inputDate:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+.tonality {
+	width: 242px;
+	height: 43px;
+	border-radius: 5px;
+	border: 1px solid #C7C7C7;
+	background: #FFF;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+	margin-left: 44px;
+	margin-top: 20px;
+	padding-left: 22px;
+	font-size: 14px;
+	letter-spacing: 0.42px;
+}
+.tonality:hover {
+	cursor: pointer;
+}
+.tonalityOption {
+	margin-left: 22px;
+	font-size: 14px;
+	letter-spacing: 0.42px;
+	font-size: 14px;
+	letter-spacing: 0.42px;
+}
+.tonalityOption:hover {
+	cursor: pointer;
+}
+.wrapperInnLimit {
+	width: 305px;
+}
+
+@media screen and (max-width: 780px) {
+	
+
+	.wrapper {
+		width: 375px;
+		height: 688px;
+		margin: 0;
+		flex-direction: column;
+	}
+	
+
+	.wrapperInnLimit {
+		width: 335px;
+	}
+
+	.labelText {
+		letter-spacing: 0.36px;
+		margin: 30px 0px 0px 14px;
+	}
+	
+	.inputInn, .inputLimitDokuments  {
+
+
+		width: 335px;
+		letter-spacing: 0.28px;
+
+		margin-left:14px;
+	}
+	
+
+	.wrapperDate {
+		
+		flex-direction: column;
+	}
+	.tonality {
+		width: 335px;
+		margin-left: 14px;
+		letter-spacing: 0.28px;
+	}
+
+
+	.wrapperCheckbox {
+		display: none;
+	}
+	
+	.searchButton {	
+		width: 335px;
+		font-size: 20px;
+		line-height:  normal;
+		letter-spacing: 0.4px;
+	
+		margin: 40px 0px 0px 14px;
+	
+		
+	}
+
+
+	.textAfterButton {
+
+		line-height: normal;
+		letter-spacing: 0.28px;
+		margin-left:14px;
+	}
+	
+	
+	.inputDate {
+		width: 335px;
+
+		margin-left: 14px;
+
+		
+		padding-left: 17px;
+
+	}
+	
+	.inputDate:nth-child(2n) {
+		margin-left: 14px;
+	
+	}
+	
 }

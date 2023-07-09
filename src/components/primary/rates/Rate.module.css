@@ -5,7 +5,7 @@
     border-radius: 10px;
 }
 
-.h4 {
+.textH4 {
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
@@ -14,14 +14,14 @@
 }
 
 
-.h5 {
+.textH5 {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     margin-left: 30px;
     margin-bottom: 10px;
 }
-.thirdH5 {
+.thirdTextH5 {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
@@ -62,7 +62,7 @@
     color: #FFFFFF;
 }
 
-.price {
+.wrapperPrice {
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
@@ -124,22 +124,116 @@
     margin-top: 55px;
 }
 
-.rectangle{
-    width: 134px;
-    height: 24px;
-    border-radius: 10px;
-    background: #3BA5E0;
-    color: #ffffff;
-    position: relative;
-    left: 271px;
-    margin-top:12px;
-    font-size: 14px;
-    color: #FFFFFF;
-    text-align: center;
-    line-height: 24px;
-}
 
 .authButton {
     background: #5970FF;
     color: #ffffff;
+}
+
+
+@media screen and (max-width: 780px) {
+    .wrapper {
+        width: 335px;
+        height: 512px;
+    }
+    .textH4 {
+        font-size: 20px;
+        line-height: normal;
+        margin:0px 0px 0px 24px;
+    }
+    
+    
+    .textH5 {
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0.18px;
+        margin-left: 24px;
+    }
+    .thirdTextH5 {
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0.18px;
+        margin:37px 0px 10px 24px;
+    }
+
+
+    .text {
+        letter-spacing: 0.18px;
+        line-height: normal;
+        line-height: 22px;
+        margin:22px 0px 0px 24px;
+        
+    }
+    
+    .image {
+        width:58px;
+        height: 54px;
+        margin-top: 10px;
+        position: relative;
+        float: right;
+        margin-right: 15px;
+    
+    }
+    
+    .firstColour {
+        background: #FFB64F;
+        border-radius: 10px 10px 0px 0px;
+        height: 132px;
+    }
+    .secondColour {
+        background: #7CE3E1;
+        border-radius: 10px 10px 0px 0px;
+        height: 132px;
+    }
+    .thirdColour{
+        background: #000000;
+        border-radius: 10px 10px 0px 0px;
+        height: 132px;
+        color: #FFFFFF;
+    }  
+
+    .priceNow {
+        letter-spacing: 0.3px;
+        line-height: normal;
+        margin: 20px  0px 10px 24px;
+    }
+    
+    .priceEarlier {
+  
+        line-height: normal;
+        letter-spacing: 0.25px;
+
+        margin: 23px  0px 10px 10px;
+    }
+    .rate {
+        line-height: normal;
+        letter-spacing: 0.18px;
+        margin: 0px  0px 36px 24px;
+    
+    }
+    
+    .checkmark {
+        width:20px;
+        height: 20px;
+        margin: 0px 0px 0px 30px;
+    }
+    
+    .checkmarkWrapper {
+        display: flex;
+        align-items: center;
+    }
+    .checkmarkText {
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0.16px;
+    }
+    
+    .button {
+        width: 287px;
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0.18px;
+        margin-left: 24px;
+        margin-top: 40px;
+    }
 }

@@ -1,5 +1,6 @@
 import css from './Header.module.css'
-import scan from '../../images/header.svg';
+import scanGreen from '../../images/header.png';
+import scanWhite from '../../images/footer.png';
 import {Link} from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { getProfileInfo } from '../../redux/thunk/profileInfo';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../../loader/Loader';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css'
 
 
 function Header() {
@@ -18,7 +20,6 @@ function Header() {
 	
 	const info = useSelector(state=>state.info)
 
-	console.log('info', info)
 	
 	const dispatch = useDispatch()
 	useEffect(() => {
@@ -30,47 +31,72 @@ function Header() {
 			localStorage.removeItem('token')
 			localStorage.removeItem('expire')
 			navigate('/')
-			window.location.reload();
 		}
-
-  //if(!info.info.eventFiltersInfo.usedCompanyCount){
-	//return <Loader />
-  //} 
-
+const [isMobile, setIsMobile] = useState(false);
 	return (
-		<header className={css.header}>
-			<img className={css.image} src={scan} alt="Скан" />
-			<div className={css.links}>
-				<Link to='/' className={css.link}>Главная</Link>
-				<a to='' className={css.link}>Тарифы</a>
-				<a to='' className={css.link}>FAQ</a>
+		<header className={isMobile ? css.headerGreen : css.header}>
+			{isMobile 
+			? (<img className={css.imageScan} src={scanWhite} alt="Скан" />)
+			: (<img className={css.imageScan} src={scanGreen} alt="Скан" />)
+			}
+			<div 
+			className={isMobile ? css.navLinksMobile : css.navLinks}
+			onClick={() => setIsMobile(false)}
+			>
+				<Link to='/' className={css.navLink}>Главная</Link>
+				<a to='' className={css.navLink}>Тарифы</a>
+				<a to='' className={css.navLink}>FAQ</a>
 			</div>
-			{/*<Loader loading={true}/> */}
-			{auth 
-			? <> <div className={css.infoCompany}><p className={css.usedCompany}>Использовано компаний</p>
-				<p className={css.companyLimit}>Лимит по компаниям</p>
-				</div>
-
-			<div className={css.personWrapper}>
-			<div className={css.personName}>Алексей А.</div>
-			<button className={css.buttonLogout} onClick={handleLogout}>Выйти</button>
-			</div>
-			<img className={css.personPhoto} src={profilePhoto } alt="Фотография пользователя" />
-			</>
+			{auth ? (
+				<> 
+			 		{info.info.eventFiltersInfo 
+						? (
+							<div className={css.infoCompanyWrapper}>
+								<div>
+									<span className={css.infoCompany}>Использовано компаний</span>
+									<span className={css.usedCompanyNumber}>{info.info.eventFiltersInfo.usedCompanyCount}</span>
+								</div>
+								<div >
+									<span className={css.infoCompany}>Лимит по компаниям</span>
+									<span className={css.usedCompanyLimitNumber}>{info.info.eventFiltersInfo.companyLimit}</span>
+								</div>
+							</div>
+						) : (
+							<div className={css.loader}>
+							<Loader/>
+							</div>
+							)
+					}
+					<div className={css.personWrapper}>
+						<div className={css.personName}>Алексей А.</div>
+						<button className={css.buttonLogout} onClick={handleLogout}>Выйти</button>
+					</div>
+					<img className={css.personPhoto} src={profilePhoto } alt="Фотография пользователя" />
+				</>
 			
-			: <> <a className={css.a}>Зарегистрироваться</a>
-			<hr className={css.hr}/>
-			<Link to='../../Authorization' className={css.button}>Войти</Link></>}
+			) : (
+				<> 
+					<div 
+					className={isMobile ? css.navLinksMobile : css.navLinks}
+					onClick={() => setIsMobile(false)}
+					>
+					<a className={css.regLink}>Зарегистрироваться</a>
+					<hr className={css.hr}/>
+					<Link to='../../Authorization' className={css.buttonLogin}>Войти</Link>
+					</div>
+				</>
+				)
+			}
+			<button 
+			className={css.mobileMenuIcon}
+			onClick={()=>setIsMobile(!isMobile)}
+			>
+				{isMobile ? ( <i className='fa fa-close'></i> ): (<i className='fa fa-bars'></i>)}
+			</button>
 		</header>
 	)
 }
 
 export default Header
 
-//<div className={css.infoCompany}><p className={css.usedCompany}>Использовано компаний {filtersInfo}</p>
-//			<p className={css.companyLimit}>Лимит по компаниям {companyLimit}</p>
-//			</div>
-
-	//	const filtersInfo = info.info.eventFiltersInfo.usedCompanyCount
-	//	const companyLimit = info.info.eventFiltersInfo.companyLimit
-  // const loading = useSelector((state) => state.info.isLoading)
+ // info.info && info.info.eventFiltersInfo 

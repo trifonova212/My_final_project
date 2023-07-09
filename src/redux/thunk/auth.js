@@ -7,11 +7,6 @@ export const loginUser = createAsyncThunk (
         try{
         const user = await axios.post('https://gateway.scan-interfax.ru/api/v1/account/login', data)
         console.log(user)
-          if ( 
-            user.data.status === 400 ||
-            user.data.status === 401 ||
-            user.data.status === 500 
-          ) return
         localStorage.setItem('token', user.data.accessToken)
         localStorage.setItem('expire', user.data.expire)
         return user.data
