@@ -20,6 +20,22 @@ import SendRequest from './SendRequest'
 
 const Result = () => {
 
+  
+
+
+  // При обновлении объекта objectSearch сохраняем его в localStorage
+  useEffect(() => {
+    localStorage.setItem('objectSearch', JSON.stringify(objectSearch));
+  }, [objectSearch]);
+
+  // При загрузке страницы проверяем наличие сохраненных данных в localStorage
+  useEffect(() => {
+    const savedObjectSearch = localStorage.getItem('objectSearch');
+    if (savedObjectSearch) {
+      dispatch(getSkanDocument(JSON.parse(savedObjectSearch).objectSearch.items));
+    }
+  }, []);
+
   const objectSearch = useSelector(state=>state.objectSearch)
   console.log('result objectsearchh',objectSearch )
 
@@ -59,6 +75,7 @@ console.log('is is visible', visible)
       
       {document.document.slice(0,visible).map((elem) =>    
           <SkanDocument 
+          key={elem.ok.id}
           date={elem.ok.issueDate} 
           sourceName={elem.ok.source.name} 
           url={elem.ok.url} 

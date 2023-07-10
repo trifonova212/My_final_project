@@ -96,7 +96,7 @@
 @media screen and (max-width: 780px) {
 	.skanDocumentwrapper {	
 		width: 335px;	
-		margin: 0px 0px 20px 14px;
+		margin: 0px 0px 20px 0px;
 	}
 	
 	.wrapperDateLink {

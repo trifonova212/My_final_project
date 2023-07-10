@@ -19,7 +19,7 @@ margin-left: 84px;
     background: white;
     position: relative;
     bottom: 150px;
-    left: 1365px;
+    left: 1400px;
 }
 @media screen and (max-width: 780px) {
     .desktopBr {
@@ -36,6 +36,6 @@ margin-left: 84px;
     }
     .nextButton {
         bottom: 125px;
-        left: 292px;
+        left: 325px;
     }
 }

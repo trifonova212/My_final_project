@@ -1,0 +1,164 @@
+
+.wrapper {
+	height: 2637px;
+}
+
+.wrapperTextImage {
+	display: flex;
+}
+
+
+.wrapperText {
+	display: flex;
+	flex-direction: column;
+}
+
+.imagePersonWithForm {
+	height: 593px;
+	width: 629px;
+	margin-right: 50px;
+	margin-top: 51px;
+}
+
+.imagePersonWithCloud {
+	height: 576px;
+	width: 1307px;
+	margin-right: 82px;
+	margin-bottom: 40px; 
+	margin-left: 51px;
+}
+
+.titleH1 {
+	font-family: 'Ferry', arial;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 60px;
+	line-height: 72px;
+	margin-left: 60px;
+	margin-top: 69px;
+	margin-bottom: 0;
+}
+
+.titleH3 {
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	margin-left: 60px;
+}
+
+.titleH2 {
+	font-family: 'Ferry', arial;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 54px;
+	margin-left: 60px;
+	margin-bottom: 70px;
+	margin-top: 200px;
+}
+
+.titleH2:last-of-type {
+	margin-top: 0px;
+	
+}
+
+.rates {
+	display: flex;
+	gap: 38px;
+	margin-left: 60px;
+}
+
+.mobileBr {
+	display: none;
+}
+
+.button {
+	background: #5970FF;
+	border-radius: 5px;
+	height: 59px;
+	width: 335px;
+	border: none;
+	margin-left: 60px;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 27px;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	line-height: 59px;
+}
+
+@media screen and (max-width: 780px) {
+	.button {
+		margin-left: 14px;
+		letter-spacing: 0.2px;
+		font-size: 20px;
+	}
+
+	.wrapper {
+		height: 3288px;
+	}
+	
+	.wrapperTextImage {
+		flex-direction: column;
+	}
+	
+	.imagePersonWithForm {
+		height: 348px;
+		width: 328px;
+		margin-left: 14px;
+		margin-top: 40px;
+		margin-bottom: 55px;
+	}
+	
+	.imagePersonWithCloud {
+		height: 392px;
+		width: 891px;
+		margin-right: 0px;
+		margin-bottom: 80px; 
+		margin-left: 14px;
+		margin-top: 26px;
+	}
+
+
+	.titleH1 {
+		font-size: 28px;
+		line-height: normal;
+		letter-spacing: 0.28px;
+		margin-left: 14px;
+		margin-top: 10px;
+	}
+	.titleH3 {
+		font-size: 18px;
+		line-height: normal;
+		letter-spacing: 0.18px;
+		margin-bottom: 32px;
+		margin-left: 14px;
+	}
+	.desktopBr {
+		display: none;
+	}
+	.mobileBr {
+		display: block;
+	}
+	.titleH2 {
+		font-size: 28px;
+		line-height: normal;
+		letter-spacing: 0.28px;
+		margin-left: 14px;
+		margin-bottom: 12px;
+		margin-top: 0px;
+	}
+	
+	.titleH2:last-of-type {
+		margin-bottom: 37px;
+		
+	}
+	
+	.rates {
+		flex-direction: column;
+		margin-left: 14px;
+	}
+}

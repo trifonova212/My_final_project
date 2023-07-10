@@ -1,6 +1,6 @@
 import css from './Header.module.css'
-import scanGreen from '../../images/header.png';
-import scanWhite from '../../images/footer.png';
+import scanGreen from '../../images/skanGreenMobile.png';
+import scanWhite from '../../images/skanWhiteMobile.png';
 import {Link} from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -77,7 +77,7 @@ const [isMobile, setIsMobile] = useState(false);
 			) : (
 				<> 
 					<div 
-					className={isMobile ? css.navLinksMobile : css.navLinks}
+					className={isMobile ? css.navLinksLogRegMobile : css.navLogRegLinks}
 					onClick={() => setIsMobile(false)}
 					>
 					<a className={css.regLink}>Зарегистрироваться</a>
@@ -88,10 +88,10 @@ const [isMobile, setIsMobile] = useState(false);
 				)
 			}
 			<button 
-			className={css.mobileMenuIcon}
+			className={isMobile ? css.mobileMenuIconClose : css.mobileMenuIconBar}
 			onClick={()=>setIsMobile(!isMobile)}
 			>
-				{isMobile ? ( <i className='fa fa-close'></i> ): (<i className='fa fa-bars'></i>)}
+				{isMobile ? ( <i className='fa fa-remove'></i> ): (<i className='fa fa-bars'></i>)}
 			</button>
 		</header>
 	)
