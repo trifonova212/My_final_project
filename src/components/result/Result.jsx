@@ -13,43 +13,56 @@ import Slider from "react-slick";
 import uniqid from 'uniqid';
 import { getSkanDocument } from '../../redux/thunk/skanObject';
 import { getHistogram } from '../../redux/thunk/histogram';
-import ResultSlider from './resultSlider/ResultSlider';
+//import ResultSlider from './resultSlider/ResultSlider';
 import SkanDocument from './skanDocument/SkanDocument';
 import axios from 'axios';
-import SendRequest from './SendRequest'
+import Loader from '../../loader/Loader';
 
 const Result = () => {
 
-  
+   const objectSearch = useSelector(state=>state.objectSearch)
+  console.log('result objectsearchh',objectSearch )
 
+	const dispatch = useDispatch()
 
-  // При обновлении объекта objectSearch сохраняем его в localStorage
   useEffect(() => {
-    localStorage.setItem('objectSearch', JSON.stringify(objectSearch));
-  }, [objectSearch]);
-
-  // При загрузке страницы проверяем наличие сохраненных данных в localStorage
-  useEffect(() => {
+    // При загрузке страницы проверяем наличие сохраненных данных в localStorage
     const savedObjectSearch = localStorage.getItem('objectSearch');
     if (savedObjectSearch) {
-      dispatch(getSkanDocument(JSON.parse(savedObjectSearch).objectSearch.items));
+      // Если сохраненные данные есть, используем их для инициализации состояния компонента
+      const objectSearch = JSON.parse(savedObjectSearch);
+      dispatch(getSkanDocument(objectSearch.items));
     }
   }, []);
 
-  const objectSearch = useSelector(state=>state.objectSearch)
-  console.log('result objectsearchh',objectSearch )
 
-
-	
-	const dispatch = useDispatch()
-	useEffect(() => {
-    console.log('GGGGGGGG',objectSearch.objectSearch.items)
-		 dispatch(getSkanDocument(objectSearch.objectSearch.items))
-				
-	}, [])
+  // При загрузке страницы проверяем наличие сохраненных данных в localStorage
 
   const document = useSelector(state=>state.document)
   console.log('result DOCUMENT',document )
+	
+
+
+  // При обновлении объекта objectSearch сохраняем его в localStorage
+
+
+  // При загрузке страницы проверяем наличие сохраненных данных в localStorage
+  
+
+	useEffect(() => {
+    const savedObjectSearch = localStorage.getItem('objectSearch');
+    if (savedObjectSearch) {
+      // Если сохраненные данные есть, используем их для инициализации состояния компонента
+      const objectSearch = JSON.parse(savedObjectSearch);
+      
+      dispatch(getSkanDocument(objectSearch.data.items));
+      
+    } else
+		 {dispatch(getSkanDocument(objectSearch.objectSearch.items))}
+	}, [])
+
+
+
 
   const [visible, setVisible] = useState(10);
 
@@ -69,11 +82,13 @@ console.log('is is visible', visible)
       </div>
 			<h2 className={css.titleH2}>Общая сводка</h2>
       <div className={css.findResults}>Найдено 4 221 вариантов</div>
-      <ResultSlider />
-      <h2 className={css.documentList}>Список документов</h2>
-      <div className={css.skanDocuments}>
       
-      {document.document.slice(0,visible).map((elem) =>    
+      <h2 className={css.documentList}>Список документов</h2>
+      
+      
+      {document.document
+        ? ( <div className={css.skanDocuments}>
+        {document.document.slice(0,visible).map((elem) =>    
           <SkanDocument 
           key={elem.ok.id}
           date={elem.ok.issueDate} 
@@ -84,9 +99,14 @@ console.log('is is visible', visible)
           wordCount={elem.ok.attributes.wordCount}
           />    
       )}
-
-      
       </div>
+			) : (
+        <div className={css.loader}>
+        <Loader/>
+        </div>
+        )
+      }
+      
       
       <button onClick={showMoreItems} className={css.showMoreBtn}>Показать больше</button>
 		</div>
@@ -96,3 +116,4 @@ console.log('is is visible', visible)
 export default Result 
 
 
+//<ResultSlider />

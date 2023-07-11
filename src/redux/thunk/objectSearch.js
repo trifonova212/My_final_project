@@ -74,7 +74,9 @@ export const getObjectSearch = createAsyncThunk (
           }
           
           )
+        localStorage.setItem('objectSearch', JSON.stringify(objectSearch));
         return objectSearch.data
+       
 
         }catch(error){
             if (error.response && error.response.data.message) {
@@ -86,3 +88,4 @@ export const getObjectSearch = createAsyncThunk (
     }
 
 )
+

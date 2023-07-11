@@ -18,7 +18,7 @@ const SkanDocument = props => {
       </div>
       <h1 className={css.titleH1}>{title}</h1>
       <div className={css.tag}>Технические новости</div>
-			
+			<img className={css.image} alt="Картинка" />
 			<p className={css.documentText}>{parserXml(content)}</p>
       <div className={css.wrapperBtnAmountWords}>
 			<button className={css.readMoreBtn}>Читать в источнике</button>

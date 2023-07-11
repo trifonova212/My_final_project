@@ -1,8 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 
+
+
 export const getSkanDocument = createAsyncThunk (
-    'documents', 
+
+    'document', 
     async (objectSearch, {rejectWithValue}) => {
         const token = localStorage.getItem('token');
         try{
@@ -23,6 +26,7 @@ export const getSkanDocument = createAsyncThunk (
           }
           
           )
+        localStorage.setItem('document', JSON.stringify(document));
         return document.data
 
         }catch(error){
