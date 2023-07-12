@@ -38,6 +38,3 @@ const FirstRate = () => {
 
 export default FirstRate
 
-//const divStyle = {
-//	border: '2px solid #FFB64F'
-//  }

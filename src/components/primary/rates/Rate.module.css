@@ -4,7 +4,6 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-
 .textH4 {
     font-weight: 500;
     font-size: 30px;
@@ -12,8 +11,6 @@
     margin:0px 0px 0px 30px;
     padding-top: 30px;
 }
-
-
 .textH5 {
     font-weight: 500;
     font-size: 20px;
@@ -27,14 +24,11 @@
     line-height: 24px;
     margin:80px 0px 10px 30px;
 }
-
 .text {
     font-size: 18px;
     line-height: 22px;
     margin:10px 0px 0px 30px;
-    
 }
-
 .image {
     width:88px;
     height: 84px;
@@ -42,9 +36,7 @@
     position: relative;
     float: right;
     margin-right: 15px;
-
 }
-
 .firstColour {
     background: #FFB64F;
     border-radius: 10px 10px 0px 0px;
@@ -61,16 +53,13 @@
     height: 132px;
     color: #FFFFFF;
 }
-
 .wrapperPrice {
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
     display: flex;
     align-items: center;
-
 }
-
 .priceEarlier {
     font-weight: 500;
     font-size: 25px;
@@ -80,38 +69,31 @@
     opacity: 0.5;
     margin: 33px  0px 10px 19px;
 }
-
 .priceNow {
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
     margin: 33px  0px 10px 30px;
 }
-
 .rate {
     font-size: 18px;
     line-height: 22px;
     margin: 0px  0px 60px 30px;
-
 }
-
 .checkmark {
     width:20px;
     height: 20px;
     margin: 0px 0px 0px 30px;
 }
-
 .checkmarkWrapper {
     display: flex;
     align-items: center;
 }
-
 .checkmarkText {
     font-size: 18px;
     line-height: 22px;
     margin: 5px 0px 0px 8px;
 }
-
 .button {
     width: 355px;
     height: 59px;
@@ -124,13 +106,14 @@
     margin-top: 55px;
     color: #ffffff;
 }
-
-
+.button:hover {
+	cursor: pointer;
+	background: #f18484;
+}
 .authButton {
     background: #5970FF;
     color: #ffffff;
 }
-
 
 @media screen and (max-width: 780px) {
     .wrapper {
@@ -142,8 +125,6 @@
         line-height: normal;
         margin:0px 0px 0px 24px;
     }
-    
-    
     .textH5 {
         font-size: 18px;
         line-height: normal;
@@ -156,16 +137,12 @@
         letter-spacing: 0.18px;
         margin:37px 0px 10px 24px;
     }
-
-
     .text {
         letter-spacing: 0.18px;
         line-height: normal;
         line-height: 22px;
-        margin:22px 0px 0px 24px;
-        
+        margin:22px 0px 0px 24px;       
     }
-    
     .image {
         width:58px;
         height: 54px;
@@ -173,9 +150,7 @@
         position: relative;
         float: right;
         margin-right: 15px;
-    
     }
-    
     .firstColour {
         background: #FFB64F;
         border-radius: 10px 10px 0px 0px;
@@ -192,33 +167,26 @@
         height: 132px;
         color: #FFFFFF;
     }  
-
     .priceNow {
         letter-spacing: 0.3px;
         line-height: normal;
         margin: 20px  0px 10px 24px;
     }
-    
     .priceEarlier {
-  
         line-height: normal;
         letter-spacing: 0.25px;
-
         margin: 23px  0px 10px 10px;
     }
     .rate {
         line-height: normal;
         letter-spacing: 0.18px;
         margin: 0px  0px 36px 24px;
-    
     }
-    
     .checkmark {
         width:20px;
         height: 20px;
         margin: 0px 0px 0px 30px;
     }
-    
     .checkmarkWrapper {
         display: flex;
         align-items: center;
@@ -228,7 +196,6 @@
         line-height: normal;
         letter-spacing: 0.16px;
     }
-    
     .button {
         width: 287px;
         font-size: 18px;

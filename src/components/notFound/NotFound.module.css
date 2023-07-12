@@ -5,10 +5,8 @@
 	font-weight: 900;
 	font-size: 60px;
 	line-height: 72px;
-text-align: center;
-
+	text-align: center;
 }
-
 .link {
 	display: block;
 	text-align: center;
@@ -27,13 +25,10 @@ text-align: center;
 }
 
 @media screen and (max-width: 780px) {
-
-	
 	.titleH1 {
 		font-size: 20px;
 		line-height: normal;
 	}
-
 	.link {
 		font-size: 15px;
 		line-height: 15px;

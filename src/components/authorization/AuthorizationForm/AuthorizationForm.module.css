@@ -41,7 +41,6 @@
 	color: #949494;
 
 }
-
 .titlePassword {
 	font-size: 16px;
 	line-height: 19px;
@@ -71,8 +70,13 @@
 	color: #FFFFFF;
 	border: none;
 }
+.enterButton:hover {
+	cursor: pointer;
+	background: #f18484;
+}
 .enterButton:disabled {
 	opacity: 0.5;
+	background: #5970FF;
 }
 .recoverLink {
 	border: none;
@@ -102,9 +106,7 @@
 }
 .errorMessage {
 	color: #FF5959;
-
 	font-size: 14px;
-
 	letter-spacing: 0.14px;
 	margin: 0;
 	text-align: center;

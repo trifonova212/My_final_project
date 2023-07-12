@@ -3,39 +3,33 @@
 	background: #FFF;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);
 	width: 641px;
-	
 	margin: 0px 0px 38px 38px;
 	display: flex;
 	flex-direction: column;
 }
-
 .wrapperDateLink {
 	display: flex;
 	margin-left: 30px;
 	margin-top: 19px;
 }
-
 .date {
 	color: #949494;
 	font-size: 16px;
 	letter-spacing: 0.32px;
 	margin-right: 14px;
 }
-
 .link {
 	color: #949494;
 	font-size: 16px;
 	letter-spacing: 0.32px;
 	text-decoration-line: underline;
 }
-
 .titleH1 {
 	font-size: 26px;
 	font-weight: 500;
 	letter-spacing: 0.52px;
 	margin-left: 30px;
 }
-
 .tag {
 	border-radius: 5px;
 	background: #FFB64F;
@@ -47,7 +41,6 @@
 	line-height: 22px;
 	margin-left: 30px;
 }
-
 .documentText {
 	margin-left: 30px;
 	opacity: 0.5;
@@ -55,16 +48,12 @@
 	letter-spacing: 0.32px;
 	margin-bottom: 32px;
 }
-
 .wrapperBtnAmountWords {
 	display: flex;
-
 	margin-left: 30px;
 	position: relative;
 	bottom: 0px;
-	
 }
-
 .amountWords {
 	color: #949494;
 	font-size: 16px;
@@ -76,9 +65,7 @@
 	margin-left: 262px;
 	margin-bottom: 20px;
 	align-self: flex-end;
-
 }
-
 .readMoreBtn {
 	border-radius: 5px;
 	background: #7CE3E1;
@@ -90,32 +77,33 @@
 	border: none;
 	margin-bottom: 20px;
 	align-self: flex-end;
-
 }
-
+.linkButton {
+	color: #000;
+	text-decoration: none;
+}
+.readMoreBtn:hover {
+	cursor: pointer;
+	background: #65f1ef;
+}
 @media screen and (max-width: 780px) {
 	.skanDocumentwrapper {	
 		width: 335px;	
 		margin: 0px 0px 20px 0px;
 	}
-	
 	.wrapperDateLink {
 		margin-left: 24px;
 	}
 	.date {
 		font-size: 14px;
-		
 		line-height: normal;
 		letter-spacing: 0.14px;
 		margin-right: 9px;
 	}
-
-
 	.link {
 		font-size: 14px;
 		line-height: normal;
 		letter-spacing: 0.14px;
-
 	}
 	.titleH1 {
 		font-size: 19px;
@@ -143,21 +131,13 @@
 	
 	.wrapperBtnAmountWords {
 		display: flex;
-	
 		margin-left: 24px;
-		
-		
 	}
 	.amountWords {
-
 		font-size: 14px;
-
 		margin-left: 19px;
 		margin-bottom: 20px;
-
-	
 	}
-
 	.readMoreBtn {
 		width: 195px;
 		height: 40px;

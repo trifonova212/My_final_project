@@ -1,7 +1,6 @@
 .wrapper {
 	height: 892px;
 }
-
 .titleH1 {
 	font-family: 'Ferry', arial;
 	text-transform: uppercase;
@@ -19,7 +18,6 @@
 	letter-spacing: 0.02em;
 	margin: 25px 0px 0px 60px;
 }
-
 .imageDocument {
 	width: 91px;
 	height: 112px;
@@ -27,7 +25,6 @@
 	bottom: 1030px;
 	left: 953px;
 }
-
 .imageFolders {	
 	width: 140px;
 	height: 68px;
@@ -35,7 +32,6 @@
 	bottom: 1060px;
 	left: 1115px;
 }
-
 .imageMan {
 	width: 442px;
 	height: 470px;
@@ -68,8 +64,6 @@
 		line-height: normal;	
 		margin: 19px 0px 21px 14px;
 	}
-	
-	
 	.imageDocument {
 		width: 59px;
 		height: 72px;
@@ -78,11 +72,9 @@
 		left: 300px;
 		bottom: 790px;
 	}
-
 	.imageFolders {	
 		display: none;
 	}
-
 	.imageMan {
 		width: 380px;
 		height: 403px;

@@ -30,7 +30,6 @@ const FirstRate = () => {
 				<img className={css.checkmark} src={checkmark} alt="Галочка"  />
 				<p className={css.checkmarkText}>Поддержка 24/7</p>
 			</div>
-		
 			<button className={css.button}>Перейти в личный кабинет</button> 
 		</div>
 	)
@@ -38,7 +37,3 @@ const FirstRate = () => {
 
 
 export default FirstRate
-
-//const divStyle = {
-//	border: '2px solid #FFB64F'
-//  }

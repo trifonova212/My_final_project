@@ -19,7 +19,3 @@ const Layout = () => {
 }
 
 export {Layout}
-
-//<header>
-//<Header />
-//</header>

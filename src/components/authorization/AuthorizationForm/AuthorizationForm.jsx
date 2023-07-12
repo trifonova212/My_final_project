@@ -2,13 +2,9 @@ import css from './AuthorizationForm.module.css'
 import google from '../../../images/google.svg';
 import facebook from '../../../images/facebook.svg';
 import yandex from '../../../images/yandex.svg';
-import { useState, useEffect } from 'react';
 import {  useForm } from 'react-hook-form'
-
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux"
-
-
 import { loginUser } from '../../../redux/thunk/auth';
 import { useAuth } from '../../../redux/hook/index';
 
@@ -24,24 +20,17 @@ const AuthorizationForm = () => {
 		
 } = useForm({mode:'onTouched'})
 
-
-
-    
 const handleSubmitForm = async (data)=> {
 	try {
-	
     await dispatch(loginUser(data))
     if (auth) {navigate('/authPrimary')} 
-
 	}catch (e) {
 		console.log('it is catch', e.message)
 		return e.message
-		
 	}
 }
 
-
-	return (
+return (
 		<form onSubmit={handleSubmit(handleSubmitForm)} className={css.wrapperForm}>
 			<div className={css.wrapperElements}>
 			<div className={css.buttons}>
@@ -61,7 +50,7 @@ const handleSubmitForm = async (data)=> {
                 placeholder=''
     
             />
-          {errors?.login && (<div className={css.errorMessage}>{errors.login.message}</div>)} 
+            {errors?.login && (<div className={css.errorMessage}>{errors.login.message}</div>)} 
 			<label className={css.titlePassword}>Пароль:</label>
 			<input
 
@@ -74,7 +63,7 @@ const handleSubmitForm = async (data)=> {
                 placeholder=''
 
             />
- 		{errors?.password && (<div className={css.errorMessage}>{errors.password.message}</div>)} 
+ 		    {errors?.password && (<div className={css.errorMessage}>{errors.password.message}</div>)} 
 		
 			<button type='submit'  className={css.enterButton} disabled={!isValid}>Войти</button>
 			<a className={css.recoverLink}>Восстановить пароль</a>
@@ -92,10 +81,7 @@ const handleSubmitForm = async (data)=> {
 			</div>
 			</div>
 			</form>
-			
 	)
 }
 
 export default AuthorizationForm;
-
-//disabled={!watchFields.login || !watchFields.password || Object.keys(errors).length > 0}

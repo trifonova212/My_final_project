@@ -1,7 +1,6 @@
 .slider {
-width: 1350px;
-margin-left: 84px;
-
+    width: 1350px;
+    margin-left: 84px;
 }
 .prevButton {
     width: 1px;
@@ -20,6 +19,10 @@ margin-left: 84px;
     position: relative;
     bottom: 150px;
     left: 1400px;
+    
+}
+.nextButton:hover, .prevButton:hover  {
+	cursor: pointer;
 }
 @media screen and (max-width: 780px) {
     .desktopBr {

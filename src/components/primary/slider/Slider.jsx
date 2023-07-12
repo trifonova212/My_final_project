@@ -23,12 +23,9 @@ export default function Sliders () {
           arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1
+      }}]});
 
-      }
-
-    }]});
-
-      const sliderRef = useRef(null)
+  const sliderRef = useRef(null)
 
   return (
     <div>

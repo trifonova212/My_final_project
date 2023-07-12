@@ -15,5 +15,4 @@ export const objectSearchSlice = createSlice( {
         }
 })
 
-
 export default objectSearchSlice.reducer

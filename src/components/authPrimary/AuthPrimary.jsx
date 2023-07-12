@@ -10,7 +10,6 @@ import {Link} from 'react-router-dom'
 
 const AuthPrimary = () => { 
 
-
 	return (
 		<div className={css.wrapper}>
 			<div className={css.wrapperTextImage}>

@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux"
-
 
 export const useAuth = () => {
         if (localStorage.getItem('token')){

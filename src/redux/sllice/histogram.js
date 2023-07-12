@@ -16,5 +16,4 @@ export const histogramSlice = createSlice( {
         }
 })
 
-
 export default histogramSlice.reducer

@@ -2,24 +2,19 @@
 .wrapper {
 	height: 2637px;
 }
-
 .wrapperTextImage {
 	display: flex;
 }
-
-
 .wrapperText {
 	display: flex;
 	flex-direction: column;
 }
-
 .imagePersonWithForm {
 	height: 593px;
 	width: 629px;
 	margin-right: 50px;
 	margin-top: 51px;
 }
-
 .imagePersonWithCloud {
 	height: 576px;
 	width: 1307px;
@@ -27,7 +22,6 @@
 	margin-bottom: 40px; 
 	margin-left: 51px;
 }
-
 .titleH1 {
 	font-family: 'Ferry', arial;
 	font-style: normal;
@@ -38,7 +32,6 @@
 	margin-top: 69px;
 	margin-bottom: 0;
 }
-
 .titleH3 {
 	font-size: 20px;
 	line-height: 24px;
@@ -46,7 +39,6 @@
 	margin-bottom: 70px;
 	margin-left: 60px;
 }
-
 .titleH2 {
 	font-family: 'Ferry', arial;
 	text-transform: uppercase;
@@ -58,32 +50,24 @@
 	margin-bottom: 70px;
 	margin-top: 200px;
 }
-
 .titleH2:last-of-type {
-	margin-top: 0px;
-	
+	margin-top: 0px;	
 }
-
 .rates {
 	display: flex;
 	gap: 38px;
 	margin-left: 60px;
 }
-
 .mobileBr {
 	display: none;
 }
-
 @media screen and (max-width: 780px) {
-
 	.wrapper {
 		height: 3288px;
 	}
-	
 	.wrapperTextImage {
 		flex-direction: column;
 	}
-	
 	.imagePersonWithForm {
 		height: 348px;
 		width: 328px;
@@ -91,7 +75,6 @@
 		margin-top: 40px;
 		margin-bottom: 55px;
 	}
-	
 	.imagePersonWithCloud {
 		height: 392px;
 		width: 891px;
@@ -100,8 +83,6 @@
 		margin-left: 14px;
 		margin-top: 26px;
 	}
-
-
 	.titleH1 {
 		font-size: 28px;
 		line-height: normal;
@@ -130,12 +111,10 @@
 		margin-bottom: 12px;
 		margin-top: 0px;
 	}
-	
 	.titleH2:last-of-type {
 		margin-bottom: 37px;
 		
 	}
-	
 	.rates {
 		flex-direction: column;
 		margin-left: 14px;

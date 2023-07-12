@@ -4,7 +4,6 @@ import scanWhite from '../../images/skanWhiteMobile.png';
 import {Link} from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { useAuth } from '../../redux/hook/index';
 import profilePhoto from '../../images/profilePhoto.svg';
 import { useNavigate } from 'react-router-dom';
@@ -15,26 +14,25 @@ import '../../../node_modules/font-awesome/css/font-awesome.min.css'
 
 
 function Header() {
+	const [isMobile, setIsMobile] = useState(false);
 	const auth = useAuth()
 	const navigate = useNavigate()
-	
 	const info = useSelector(state=>state.info)
-
-	
 	const dispatch = useDispatch()
+
 	useEffect(() => {
 		 dispatch(getProfileInfo())
 				
 	}, [])
 
-		const handleLogout = () => {
-			localStorage.removeItem('token')
-			localStorage.removeItem('expire')
-			navigate('/')
-		}
-const [isMobile, setIsMobile] = useState(false);
+	const handleLogout = () => {
+		localStorage.removeItem('token')
+		localStorage.removeItem('expire')
+		navigate('/')
+	}
+
 	return (
-		<header className={isMobile ? css.headerGreen : css.header}>
+		<div className={isMobile ? css.headerGreen : css.header}>
 			{isMobile 
 			? (<img className={css.imageScan} src={scanWhite} alt="Скан" />)
 			: (<img className={css.imageScan} src={scanGreen} alt="Скан" />)
@@ -43,7 +41,7 @@ const [isMobile, setIsMobile] = useState(false);
 			className={isMobile ? css.navLinksMobile : css.navLinks}
 			onClick={() => setIsMobile(false)}
 			>
-				<Link to='/' className={css.navLink}>Главная</Link>
+				<a className={css.navLink}>Главная</a>
 				<a to='' className={css.navLink}>Тарифы</a>
 				<a to='' className={css.navLink}>FAQ</a>
 			</div>
@@ -93,10 +91,9 @@ const [isMobile, setIsMobile] = useState(false);
 			>
 				{isMobile ? ( <i className='fa fa-remove'></i> ): (<i className='fa fa-bars'></i>)}
 			</button>
-		</header>
+		</div>
 	)
 }
 
 export default Header
-
- // info.info && info.info.eventFiltersInfo 
+ 

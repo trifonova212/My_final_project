@@ -1,51 +1,30 @@
 import css from './SearchForm.module.css'
 import star from '../../../images/star.svg' 
-import { useEffect, useState } from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { useForm  } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { getHistogram } from '../../../redux/thunk/histogram'
-import Select from "react-select";
 import { getObjectSearch } from '../../../redux/thunk/objectSearch'
 
-
-
-
 const SearchForm = () => {
-
-
-	const histogram = useSelector(state=>state.histogram)
-
-	console.log('getHistogram searcvhform', histogram)
-
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
-	
+
 	const {
 		register,
 		handleSubmit,
-		formState: {errors, isValid},
-		
+		formState: {errors, isValid}
 } = useForm({mode:'onTouched'})
-
 
 const onSubmit = async (data)=> {
 	try {
-	
     await dispatch(getHistogram(data))
 	await dispatch(getObjectSearch(data))
     navigate('/result')
-	console.log('it id data search',data);
 	}catch (e) {
-		console.log('it is catch', e.message)
 		return e.message
-		
 	}
 }
-
-const nav = useNavigate()
-
-
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={css.wrapper}>
 			<div>
@@ -55,7 +34,6 @@ const nav = useNavigate()
 				<div className={css.wrapperInnLimit}>
 				<input
 					className={css.inputInn}
-					//name="title"
 					type="number"
 					placeholder='10 цифр'
 					{...register('inn', {
@@ -70,7 +48,6 @@ const nav = useNavigate()
 					<option className={css.tonalityOption} value='positive' >Положительная</option>
 					<option className={css.tonalityOption} value='negative'>Отрицательная</option>
 				</select>
-
 				<label className={css.labelText}>Количество документов в выдаче
 					<img className={css.star} src={star} alt="Звездочка" />
 				</label>
@@ -103,7 +80,6 @@ const nav = useNavigate()
 							required: 'Введите корректные данные',
 							})}
 						className={css.inputDate}
-					
 					/>
 				</div>
 				{errors?.startDate && errors?.endDate && (<div className={css.errorMessage}>{errors.startDate.message}</div>)}
@@ -144,7 +120,6 @@ const nav = useNavigate()
 					type="checkbox" 
 					name="onlyWithRiskFactors" 
 					id="onlyWithRiskFactors">
-
 					</input>
 					<label className={css.labelCheckbox} htmlFor="onlyWithRiskFactors">Публикации только с риск-факторами</label>
 				</div>
@@ -155,7 +130,6 @@ const nav = useNavigate()
 					type="checkbox" 
 					name="isTechNews" 
 					id="isTechNews">
-
 					</input>
 					<label className={css.labelCheckbox} htmlFor="isTechNews">Включать технические новости рынков</label>
 				</div>
@@ -175,7 +149,6 @@ const nav = useNavigate()
 					type="checkbox" 
 					name="isDigest" 
 					id="isDigest">
-
 					</input>
 					<label className={css.labelCheckbox} htmlFor="isDigest">Включать сводки новостей</label>
 				</div>
@@ -186,47 +159,3 @@ const nav = useNavigate()
 )}
 
 export default SearchForm
-//checked={something} onChange={e => setSomething(e.target.checked)
-//<ReactSelect
-//className={css.select}
-//placeholder={'SOMETHING'}
-//options={options}
-//value={getValue(value)}
-//onChange={(newValue)=>onChange(newValue)}
-///>
-
-
-//<Controller
-//control={control} 
-//name='tonal' 
-//rules={{
-//	required: 'contry is required'
-//}}
-//render={({field:{ onChange, value}, fieldState:{error}})=> (
-//<div>
-
-//{error && 
-//<div style={{color: 'red'}}>
-//{error.message}</div>}
-//</div>
-//)}
-///>
-
-
-
-//{maping.map(value => {
-//	return(   
-//	  <div key={uniqid()}  className={css.sliderItem}>
-//		<span>{value.data[0].value}</span>
-
-//	</div>
-//	)})}
-
-	
-//	<div>
-//	{infoProfile.map((item) => (
-//		<div key={item.encodedId}>{item.encodedId}</div>
-//	))}
-//	</div>
-
-

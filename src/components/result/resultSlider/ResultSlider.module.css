@@ -3,7 +3,6 @@
     display: flex;
     justify-content: flex-end;
 } 
-
 .wrapperSlader {
     width: 1260px;
     height: 158px;
@@ -12,15 +11,12 @@
     margin-left: 94px;
     display: flex;
 }
-
 .hearders {
     width: 133px;
     display: flex;
     flex-direction: column;
     background-color: #029491;
-
 }
-
 .hearder {
     color: #FFF;
     font-size: 20px;
@@ -28,11 +24,9 @@
     letter-spacing: 0.4px;
     margin: 27px 0 0 27px;
 }
-
 .hearder:first-child {
     margin-top: 17px;
 }
-
 .prevButton {
     border: none;
     background: white;
@@ -40,8 +34,6 @@
     bottom: 103px;
     left: 40px;
 }
-
-
 .nextButton {
     border: none;
     background: white;
@@ -49,20 +41,19 @@
     bottom: 103px;
     left: 1305px;
 }
-
+.nextButton:hover, .prevButton:hover  {
+	cursor: pointer;
+}
 .wrapperResults {
     margin-top: 18px;
 }
-
 .documentNumberResult:first-child {
     margin-top: 0px;
 }
-
 .documentNumberResult {
     margin-top: 36px;
     text-align: center
 }
-
 .line {
 	width: 2px;
 	height: 124px;
@@ -70,22 +61,27 @@
 	background: #949494;
     opacity: 0.6;
     position: relative;
-	float: right;
-    
+	float: right;  
 }
 .documentNumberResultContainer {
     width: 130px;
     margin: 0 auto;
 }
-
-
-
-
-
-
+.findResults {
+	color: #949494;
+	font-size: 18px;
+	line-height: normal;
+	letter-spacing: 0.36px;
+	margin: 17px 0px 27px 60px;
+}
 @media screen and (max-width: 780px) {
+    .findResults {
+		letter-spacing: 0.18px;
+		margin: 10px 0px 34px 14px;
+	}
     .wrapper {
         height: 140px;
+        
     }
 	.slider {
         width: 298px;
@@ -93,18 +89,15 @@
         display: flex;
         justify-content: center;
     } 
-    
     .wrapperSlader {
         width: 300px;
         height: 140px;
-
         border: none;
         margin-left: 38px;
         flex-direction: column;
         margin-bottom: ;
         background: #FFF;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);
-
     }
     
     .hearders {
@@ -113,12 +106,10 @@
         border-top-left-radius: 10px;
         border-top-right-radius:  10px;
         flex-direction:row;
-
     }
     .hearder {
         line-height: normal;
         font-size: 18px;
-       
         letter-spacing: 0.18px;
         margin: 23px 0 0 0px;
     }
@@ -132,14 +123,9 @@
     .hearder:nth-child(3n) {
         margin-left: 20px;
     }
-    
- 
-
-    
     .wrapperResults {
         margin-top: 0px;
     }
-
     .documentNumberResult {
         margin-top: 18px;
         text-align: center;
@@ -151,17 +137,11 @@
         margin-top: 18px;
         margin-left: 9px;
     }
-
     .documentNumberResult {
         margin-left: 60px;
     }
-
-
-
-    
     .line {
         display: none;
-        
     }
     .documentNumberResultContainer {
         width: 298px;
@@ -176,7 +156,6 @@
         bottom: 57px;
         left: -7px;
     }
-    
     .nextButton {
         width: 1px;
         height: 1px;

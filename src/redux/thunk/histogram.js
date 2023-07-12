@@ -75,7 +75,7 @@ export const getHistogram = createAsyncThunk (
           }
           
           )
-      
+        localStorage.setItem('histogram', JSON.stringify(histogram));
         return histogram.data
 
         }catch(error){

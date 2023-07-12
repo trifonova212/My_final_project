@@ -90,6 +90,11 @@
 	line-height: 59px;
 }
 
+.button:hover {
+	cursor: pointer;
+	background: #f18484;
+}
+
 @media screen and (max-width: 780px) {
 	.button {
 		margin-left: 14px;

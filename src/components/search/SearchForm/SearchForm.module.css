@@ -6,16 +6,13 @@
 	margin: 47px 0px 0px 53px;
 	display: flex;
 }
-
 .star{
 	position: relative;
 	left: 3px;
 	bottom: 10px;
 	width: 13px;
 	height: 13px;
-
 }
-
 .labelText {
 	font-size: 18px;
 	line-height: 22px;
@@ -23,7 +20,6 @@
 	margin: 30px 0px 0px 44px;
 	display: block;
 }
-
 .inputInn, .inputLimitDokuments  {
 	border: 1px solid #C7C7C7;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
@@ -41,38 +37,33 @@
 	cursor: pointer;
 	opacity: 1;
 }
-
 .wrapperDate {
 	display: flex;
 }
-
 .wrapperCheckbox {
 	display: flex;
 }
-
-
 .labelCheckbox {
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 0.03em;
 	margin: 15px 0px 0px 20px;
 }
-
 .maginLabelCheckbox {
 	margin-top: 36px;
 }
-
 .checkbox {
 	margin-top: 17px;
 	margin-left: 15px;
 	height: 14px;
 	width: 14px;
-
+}
+.checkbox:hover {
+	cursor: pointer;
 }
 .maginCheckbox {
 	margin-top: 40px;
 }
-
 .searchButton {
 	display: block;
 	width: 305px;
@@ -89,10 +80,14 @@
 	text-decoration: none;
 	text-align: center;
 	line-height: 59px;
-	
+}
+.searchButton:hover {
+	cursor: pointer;
+	background: #f18484;
 }
 .searchButton:disabled {
 	opacity: 0.5;
+	background: #5970FF;
 }
 .errorMessage{
 	color: #FF5959;
@@ -100,7 +95,6 @@
 	letter-spacing: 0.14px;
 	margin: 0;
 	text-align: center;
-
 }
 .textAfterButton {
 	font-size: 14px;
@@ -109,8 +103,6 @@
 	color: #949494;
 	margin: 10px 0px 0px 112px;
 }
-
-
 .inputDate {
 	width: 176px;
 	height: 43px;
@@ -126,10 +118,8 @@
 	font-size: 14px;
 	letter-spacing: 0.42px;
 }
-
 .inputDate:nth-child(2n) {
 	margin-left: 20px;
-
 }
 .inputDate:hover {
 	cursor: pointer;
@@ -164,39 +154,26 @@
 .wrapperInnLimit {
 	width: 305px;
 }
-
 @media screen and (max-width: 780px) {
-	
-
 	.wrapper {
 		width: 375px;
 		height: 688px;
 		margin: 0;
 		flex-direction: column;
 	}
-	
-
 	.wrapperInnLimit {
 		width: 335px;
 	}
-
 	.labelText {
 		letter-spacing: 0.36px;
 		margin: 30px 0px 0px 14px;
 	}
-	
 	.inputInn, .inputLimitDokuments  {
-
-
 		width: 335px;
 		letter-spacing: 0.28px;
-
 		margin-left:14px;
 	}
-	
-
 	.wrapperDate {
-		
 		flex-direction: column;
 	}
 	.tonality {
@@ -204,45 +181,28 @@
 		margin-left: 14px;
 		letter-spacing: 0.28px;
 	}
-
-
 	.wrapperCheckbox {
 		display: none;
 	}
-	
 	.searchButton {	
 		width: 335px;
 		font-size: 20px;
 		line-height:  normal;
 		letter-spacing: 0.4px;
-	
 		margin: 40px 0px 0px 14px;
-	
-		
 	}
-
-
 	.textAfterButton {
-
 		line-height: normal;
 		letter-spacing: 0.28px;
 		margin-left:14px;
 	}
-	
-	
 	.inputDate {
 		width: 335px;
-
 		margin-left: 14px;
-
-		
 		padding-left: 17px;
-
 	}
-	
 	.inputDate:nth-child(2n) {
 		margin-left: 14px;
-	
 	}
 	
 }

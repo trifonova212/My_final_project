@@ -1,6 +1,4 @@
 import css from './SkanDocument.module.css'
-import axios from 'axios';
-import { useSelector } from 'react-redux';
 import { formatDate } from '../../../hooks/formatDate';
 import parserXml from '../../../hooks/parserXml';
 
@@ -18,10 +16,9 @@ const SkanDocument = props => {
       </div>
       <h1 className={css.titleH1}>{title}</h1>
       <div className={css.tag}>Технические новости</div>
-			<img className={css.image} alt="Картинка" />
 			<p className={css.documentText}>{parserXml(content)}</p>
       <div className={css.wrapperBtnAmountWords}>
-			<button className={css.readMoreBtn}>Читать в источнике</button>
+			<button className={css.readMoreBtn}><a className={css.linkButton} href={url} target="_blank">Читать в источнике</a></button>
       <div className={css.amountWords}>{wordCount}</div>
       </div>
 		</div>

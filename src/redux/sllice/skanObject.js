@@ -16,5 +16,4 @@ export const documentSlice = createSlice( {
         }
 })
 
-
 export default documentSlice.reducer

@@ -1,5 +1,3 @@
-
-//import TaskDetail from '../task-detail/TaskDetail'
 import css from './Search.module.css'
 import man from '../../images/man.svg';
 import document from '../../images/document.svg';

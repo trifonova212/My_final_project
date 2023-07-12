@@ -16,5 +16,4 @@ export const profileInfoSlice = createSlice( {
         }
 })
 
-
 export default profileInfoSlice.reducer
