@@ -1,4 +1,4 @@
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements, } from 'react-router-dom'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Authorization from './components/authorization/Authorization'
 import Primary from './components/primary/Primary'
 import Search from './components/search/Search'
@@ -21,7 +21,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 			<RequireAuth>
 				<Search />
 			</RequireAuth>
-	} />
+		} />
 		<Route path={'/result'} element={
 			<RequireAuth>
 				<Result />
@@ -36,7 +36,7 @@ function App() {
 
   	return (
 		<div className='wrapper'>	
-		<RouterProvider router={router}/>
+			<RouterProvider router={router}/>
 		</div>
   	)
 }

@@ -21,13 +21,9 @@ const AuthorizationForm = () => {
 } = useForm({mode:'onTouched'})
 
 const handleSubmitForm = async (data)=> {
-	try {
+	
     await dispatch(loginUser(data))
-    if (auth) {navigate('/authPrimary')} 
-	}catch (e) {
-		console.log('it is catch', e.message)
-		return e.message
-	}
+    navigate('/authPrimary') 
 }
 
 return (

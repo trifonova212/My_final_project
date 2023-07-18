@@ -13,9 +13,9 @@ export const authSlice = createSlice( {
     },
         extraReducers: (builder) => {
             builder.addCase(loginUser.fulfilled, (state, action)=>{
-            state.user = action.payload
-            state.isLogged = true
-            localStorage.setItem('token', state.user.accessToken)
+                    state.user = action.payload;
+                    state.isLogged = true;
+                    localStorage.setItem('token', state.user.accessToken);
             })
         }
 })

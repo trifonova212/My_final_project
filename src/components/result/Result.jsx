@@ -30,7 +30,6 @@ const Result = () => {
    {dispatch(getSkanDocument(objectSearch.objectSearch.items))}
    
 }, [])
-
 	return (
 		<div className={css.wrapper}>
       <div className={css.wrapperTextImage}>
@@ -41,7 +40,7 @@ const Result = () => {
         <img className={css.image} src={woman} alt="Девушка с лупой" />
       </div>
 			<h2 className={css.titleH2}>Общая сводка</h2>
-    { !objectSearch.data && !objectSearch.objectSearch ?  
+    {!objectSearch.data && !objectSearch.objectSearch ?  
   <>
   <div>По данным параметрам запроса ничего не найдено!</div>
   <Link to="/" className={css.link}>Вернуться на главную</Link>
