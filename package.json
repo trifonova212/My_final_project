@@ -2,6 +2,7 @@
   "name": "final_project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://trifonova212.github.io/My_final_project/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,6 +13,7 @@
     "clsx": "^1.2.1",
     "dateformat": "^5.0.3",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^6.1.1",
     "mobx": "^6.9.0",
     "mobx-react-lite": "^3.4.3",
     "moment": "^2.29.4",
